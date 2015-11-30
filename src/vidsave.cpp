@@ -45,7 +45,7 @@ int main(int argc,const char** argv){
 	/*double fps= cap.get(CV_CAP_PROP_FPS);
 	cout<<"FPS: "<<fps<<endl;*/ 
 	
-	namedWindow("VIDCAP",CV_WINDOW_AUTOSIZE);
+	if( display_index) namedWindow("VIDCAP",CV_WINDOW_AUTOSIZE);
 	
 	
    //Size size=cvSize(640,480);

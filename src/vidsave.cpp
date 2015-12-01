@@ -23,7 +23,6 @@ const string currentDateTime() {
 
 int cap_index=0;
 bool display_index=false;
-
 int main(int argc,const char** argv){
 
 	if(argc<3){

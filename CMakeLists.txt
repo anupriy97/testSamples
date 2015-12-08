@@ -10,10 +10,11 @@ find_package(catkin REQUIRED COMPONENTS
   #rosserial_arduino
   #rosserial_client
   #std_msgs
+  #genmsg
   #message_generation
 )
 find_package(
-	OpenCV
+	OpenCV REQUIRED
 )
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -105,6 +106,9 @@ add_executable(vidsave src/vidsave.cpp)
 target_link_libraries(vidsave ${catkin_LIBRARIES})
 target_link_libraries(vidsave  ${OpenCV_LIBS} )
 add_dependencies(vidsave linefollowing_generate_messages_cpp)
+
+add_executable(capture src/capture.cpp )
+target_link_libraries( capture  ${OpenCV_LIBS} )
 
 
 ## Declare a cpp library

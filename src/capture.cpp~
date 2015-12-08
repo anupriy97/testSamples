@@ -47,16 +47,9 @@ int main(int argc, char* argv[])
 			char space=waitKey(10);
 			if(space==32) {
 				check=!check;
-				if(a==0)
-				{
-					printf("Recording started..");
-					a++;
-				}
-				else if(a==1)
-				{
-					printf("Recording stopped.");
-					break;
-				}
+				cout<<"Space key pressed"<<endl;
+				if(a==0) a++;
+				else if(a==1) break;
 			}
 			Mat frame;
 		
